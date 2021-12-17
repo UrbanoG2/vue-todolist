@@ -18,6 +18,40 @@
 var app = new Vue({
     el: '#app',
     data: {
-      message: 'Hello Vue!'
+      newElement: "",
+      todos: [
+        {
+            text: "Farina",
+            boolean: false,
+        },
+
+        {
+            text: "Cioccolato",
+            boolean: false,
+        },
+
+        {
+            text: "Zucchero",
+            boolean: false,
+        },
+      ]
+    },
+
+    methods: {
+      addElement: function () {
+        if (this.newElement.length != 0) {
+          let object = {
+            text: this.newElement,
+            boolean: false,
+          }
+
+          this.todos.unshift(object);
+          this.newElement = " ";
+
+        }
+
+        
+      }
     }
+
 })
