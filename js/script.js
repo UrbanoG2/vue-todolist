@@ -21,12 +21,12 @@ var app = new Vue({
       todos: [
         {
             text: "Farina",
-            done: false,
+            done: true,
         },
 
         {
             text: "Cioccolato",
-            done: false,
+            done: true,
         },
 
         {
@@ -52,11 +52,21 @@ var app = new Vue({
         }
       },
 
-      addLine: function () {
-          this.todos.done = !this.todos.done;
+      // addLine: function () {
+      //     this.todos.done = !this.todos.done;
 
-          console.log("clicked");
-          console.log(this.todos.done);
+      //     console.log("clicked");
+      //     console.log(this.todos.done);
+      // },
+
+
+      triggerDone: function (index) {
+        if (this.todos[index].done) {
+          this.todos[index].done = false;
+        } else {
+          this.todos[index].done = true
+        }
+        
       },
       // elementClick: function () {
       //   if (this.todos.done == false) {

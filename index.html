@@ -25,7 +25,12 @@
             </div>
             <div class="todos">
                 <ul>
-                    <li @click="" v-for="(todo,index) in todos">
+                    <li 
+                    @click="triggerDone(index)"
+                    :class="{line : todo.done}"
+                     v-for="(todo,index) in todos"
+                    
+                    >
                         
                         <h3>{{ todo.text }}</h3>
                         <button @click="deleteItem(index)" class="close">X</button>
