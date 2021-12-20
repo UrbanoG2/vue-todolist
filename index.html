@@ -25,11 +25,11 @@
             </div>
             <div class="todos">
                 <ul>
-                    <li v-for="(todo,index) in todos">
-                        <div>
-                            <h3 v-if="">{{ todo.text }}</h3>
-                            
-                        </div>
+                    <li @click="elementClick" v-for="(todo,index) in todos">
+                        
+                        <h3>{{ todo.text }}</h3>
+                        <button @click="deleteItem(index)" class="close">X</button>
+                        
                     </li>
                 </ul>
             </div>

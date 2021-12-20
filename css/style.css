@@ -19,6 +19,20 @@ h2 {
     text-transform: uppercase;
 }
 
+h3 {
+    display: inline-block;
+}
+
+.close {
+    margin-right: 1em;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.close:hover {
+    cursor: pointer;
+}
+
 .big-container {
     display: flex;
     flex-direction: column;
@@ -64,3 +78,24 @@ ul {
     margin-top:1em;
     font-size: 1.8em;
 }
+
+li {
+    border-radius: 10px;
+    background: rgb(255,255,255);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(255, 143, 5, 0.87) 100%);
+    padding: 0.5em 0;
+    margin: 0.3em 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+li:hover {
+    cursor: pointer;
+}
+
+
+/* .line-through {
+    text-decoration: line-through;
+} */
+
+

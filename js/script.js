@@ -12,8 +12,7 @@
 // Bonus:
 // 1- oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il todo alla lista
 // 2- cliccando sul testo dell’item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
-// Io sarò qui fino alle 13.00 per eventuali hotwell.
-// Oggi pomeriggio ci sarà recap, Elisabetta vi darà ulteriori indicazioni :faccia_leggermente_sorridente:
+
 
 var app = new Vue({
     el: '#app',
@@ -22,36 +21,69 @@ var app = new Vue({
       todos: [
         {
             text: "Farina",
-            boolean: false,
+            done: false,
         },
 
         {
             text: "Cioccolato",
-            boolean: false,
+            done: false,
         },
 
         {
             text: "Zucchero",
-            boolean: false,
+            done: false,
         },
       ]
+
+      
     },
 
     methods: {
       addElement: function () {
         if (this.newElement.length != 0) {
+          console.log(this.newElement.length);
           let object = {
             text: this.newElement,
-            boolean: false,
+            done: false,
           }
 
           this.todos.unshift(object);
           this.newElement = " ";
-
         }
+      },
 
-        
+      // addLine: function () {
+      //     this.todos.done = !this.todos.done;
+
+      //     console.log("clicked");
+      //     console.log(this.todos.done);
+      // }
+      // elementClick: function () {
+      //   if (this.todos.done == false) {
+      //     this.todos.done == true;
+      //     //addline
+      //   } else {
+      //     this.todos.done == false;
+      //     //remove line
+      //   }
+
+      // },
+
+      deleteItem: function (index) {
+        //al click della X deve sparire l'elemento
+        this.todos.splice(index, 1)
+        console.log(index);
       }
-    }
+
+    },
+
+    // created() {
+    //   deleteItem (todos)
+    // },
+
+    //if (done == true) show line
 
 })
+
+
+
