@@ -52,12 +52,12 @@ var app = new Vue({
         }
       },
 
-      // addLine: function () {
-      //     this.todos.done = !this.todos.done;
+      addLine: function () {
+          this.todos.done = !this.todos.done;
 
-      //     console.log("clicked");
-      //     console.log(this.todos.done);
-      // }
+          console.log("clicked");
+          console.log(this.todos.done);
+      },
       // elementClick: function () {
       //   if (this.todos.done == false) {
       //     this.todos.done == true;
